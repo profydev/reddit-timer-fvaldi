@@ -5,19 +5,27 @@ import { Link } from 'react-router-dom';
 import Logo from './img/logo.svg';
 
 const Nav = styled.header`
-  padding: 30px 80px;
+  padding: 0px 80px;
   display: flex;
   justify-content: space-between;
 `;
 
-const RightMenu = styled.header`
-  margin-top: 0.5rem;
+const MenuLogo = styled.div`
+  margin-top: 32px;
+`;
+
+const StyledLogo = styled.img`
+  display: block;
+`;
+
+const RightMenu = styled.div`
+  margin-top: 37.5px;
   display: flex;
   justify-content: space-between;
 `;
 
 const MenuLink = styled.div`
-  margin-left: 1.6rem;
+  margin-left: 26px;
   cursor: pointer;
   a {
     text-decoration: none;
@@ -27,9 +35,11 @@ const MenuLink = styled.div`
 
 const Header = () => (
   <Nav>
-    <Link to="/">
-      <img src={Logo} alt="App Logo" />
-    </Link>
+    <MenuLogo>
+      <Link to="/">
+        <StyledLogo src={Logo} alt="App Logo" />
+      </Link>
+    </MenuLogo>
 
     <RightMenu>
       <MenuLink>
