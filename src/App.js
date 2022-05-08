@@ -1,21 +1,25 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
-import Search from './pages/search';
+
+import { ThemeProvider } from 'styled-components';
+import { Normalize } from 'styled-normalize';
+import GlobalStyle from './GlobalStyle';
+import theme from './theme';
 import Header from './Header';
-import 'normalize.css';
-import './styles/global.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>App Placeholder</div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="search" element={<Search />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Normalize />
+        <GlobalStyle />
+        <Header />
+        <Routes>
+          <Route path="/search" element="search" />
+          <Route path="/" element="home" />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
