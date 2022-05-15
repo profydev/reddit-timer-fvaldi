@@ -5,7 +5,7 @@ import * as S from './Footer.style';
 function Footer() {
   return (
     <S.Container>
-      <S.a href="https://ooloo.io/employers">profy.dev</S.a>
+      <S.a href="https://profy.dev/employers">profy.dev</S.a>
       <Link to="/">
         <S.Logo />
       </Link>

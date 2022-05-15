@@ -5,7 +5,7 @@ import { ReactComponent as UnstyledLogo } from './logo.svg';
 export const Container = styled.footer`
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 0 250px;
 `;
 
 export const Logo = styled(UnstyledLogo)``;
