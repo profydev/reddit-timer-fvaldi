@@ -5,11 +5,13 @@ import * as S from './Footer.style';
 function Footer() {
   return (
     <S.Container>
-      <S.a href="https://profy.dev/employers">profy.dev</S.a>
+      <S.LeftLink as="a" href="https://profy.dev/employers">
+        profy.dev
+      </S.LeftLink>
       <Link to="/">
         <S.Logo />
       </Link>
-      <S.Link to="/terms">Terms & Privacy</S.Link>
+      <S.RightLink to="/terms">Terms & Privacy</S.RightLink>
     </S.Container>
   );
 }
