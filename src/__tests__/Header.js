@@ -26,7 +26,7 @@ test('navigates to home page when logo is clicked', async () => {
   const logoLink = screen.getByRole('link', { name: /logo\.svg/i });
   await userEvent.click(logoLink);
 
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(screen.getByText(/no reactions/i)).toBeInTheDocument();
 });
 
 test('navigates to search page when search link is clicked', async () => {
@@ -51,7 +51,7 @@ test.each`
     const hashLink = screen.getByRole('link', { name: link });
     await userEvent.click(hashLink);
 
-    expect(screen.getByText(/home page/i)).toBeInTheDocument();
+    expect(screen.getByText(/no reactions/i)).toBeInTheDocument();
     expect(history.location.hash).toEqual(hash);
   },
 );
