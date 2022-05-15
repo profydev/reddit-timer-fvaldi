@@ -12,5 +12,5 @@ test('renders App', () => {
     </Router>,
   );
 
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(screen.getByText(/no reactions/i)).toBeInTheDocument();
 });
